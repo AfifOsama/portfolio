@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Afif Osamaladen – Experienced Mobile & Web Frontend Developer specializing in React JS, React Native, and Flutter.">
+
+    <title>Afif Osamaladen - Portfolio</title>
+
+    <!-- Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&family=JetBrains+Mono:wght@500&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap">
+
+    <!-- Tailwind CSS (CDN) — config must be set *after* CDN so tailwind global exists -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script src="js/tailwind.config.js"></script>
+
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+
+<body class="text-on-background min-h-screen flex flex-col"
+      style="background: radial-gradient(circle at top center, #1c2028 0%, #10131b 100%);">
+
+    <!-- =====================================================
+         TOP APP BAR
+         ===================================================== -->
+    <header class="bg-background/80 backdrop-blur-md w-full top-0 sticky z-50 border-b border-outline-variant">
+        <div class="flex justify-between items-center max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-4">
+            <div class="text-headline-sm font-headline-sm font-bold text-on-surface tracking-tight">
+                Afif Osamaladen
+            </div>
+
+            <nav class="hidden md:flex items-center gap-6" aria-label="Primary navigation">
+                <a class="text-on-surface-variant hover:text-primary transition-colors duration-200 text-body-md font-body-md" href="#hero">About</a>
+                <a class="text-on-surface-variant hover:text-primary transition-colors duration-200 text-body-md font-body-md" href="#about">Stack</a>
+                <a class="text-on-surface-variant hover:text-primary transition-colors duration-200 text-body-md font-body-md" href="#projects">Projects</a>
+                <a class="text-on-surface-variant hover:text-primary transition-colors duration-200 text-body-md font-body-md" href="#contact">Contact</a>
+            </nav>
+
+            <a href="Afif Osamaladen-resume_page-0001.jpg"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="bg-primary text-on-primary font-bold py-2 px-4 rounded hover:bg-primary-fixed transition-colors duration-300">
+                Resume
+            </a>
+        </div>
+    </header>
+
+    <main class="flex-grow">
+
+        <!-- =====================================================
+             HERO SECTION
+             ===================================================== -->
+        <section id="hero"
+                 class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-stack-lg md:py-32
+                        flex flex-col-reverse md:flex-row items-center gap-gutter">
+
+            <!-- Text content -->
+            <div class="flex-1 flex flex-col items-start gap-stack-md">
+                <div class="inline-flex items-center px-3 py-1 rounded-full bg-primary/10 text-primary font-label-mono text-label-mono">
+                    <span class="material-symbols-outlined text-[16px] mr-2">code</span>
+                    Mobile &amp; Web Frontend Developer
+                </div>
+
+                <h1 class="font-display-lg-mobile text-display-lg-mobile md:font-display-lg md:text-display-lg text-on-surface">
+                    Experienced Mobile &amp; Web Frontend Developer
+                    specializing in React JS, React Native, and Flutter.
+                </h1>
+
+                <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+                    Building high-performance, cross-platform experiences with 8+ apps released
+                    and scalable web solutions using Tailwind CSS and React JS.
+                    Dedicated to clean architecture and exceptional user experiences.
+                </p>
+
+                <div class="flex gap-4 mt-4">
+                    <a class="bg-primary text-on-primary font-bold py-3 px-6 rounded-xl
+                              hover:bg-primary-fixed transition-colors duration-300
+                              inline-flex items-center shadow-[0_0_15px_rgba(173,198,255,0.2)]"
+                       href="#projects">
+                        View Projects
+                        <span class="material-symbols-outlined ml-2">arrow_forward</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Orbit visual -->
+            <div class="flex-1 w-full max-w-md relative">
+                <div class="aspect-square rounded-full relative z-10 group">
+                    <div class="orbit-container">
+                        <!-- Background effects -->
+                        <div class="stars"></div>
+                        <div class="nebula nebula-1"></div>
+                        <div class="nebula nebula-2"></div>
+
+                        <!-- Avatar -->
+                        <div class="avatar-center">
+                            <img
+                                src="https://lh3.googleusercontent.com/aida/ADBb0uharYyt1SalNWhj0bRYMzDFFHO07CwD7o6EJ5XhSkwa2TShNx_UqwD5g1vt4a9DnW41Njez_bAbX8bq5ty_Qjhh3_-cE-G2J8Mq5f_UXoKMRuAIupCOFU1qK6KUzsnK8cJOSOEYFAuTC94KJBdTpAF8XQgEuMgwVoI4lf0UcB7icJNj_72jkgB9CX1Kz9rJLkKFQFbggA36Ad48H8AXykxi0mgVd_rNWopMO82hXjyxcleZyA9TsFKhu9I"
+                                alt="Afif Osamaladen Avatar"
+                            >
+                        </div>
+
+                        <!-- Orbit 1: laptop + mobile -->
+                        <div class="orbit-path orbit-1">
+                            <div class="orbit-item item-laptop" aria-hidden="true">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                     fill="none" stroke="currentColor" stroke-width="2"
+                                     stroke-linecap="round" stroke-linejoin="round">
+                                    <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                                    <line x1="2" y1="20" x2="22" y2="20"></line>
+                                </svg>
+                            </div>
+                            <div class="orbit-item item-mobile" aria-hidden="true">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                     fill="none" stroke="currentColor" stroke-width="2"
+                                     stroke-linecap="round" stroke-linejoin="round">
+                                    <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+                                    <line x1="12" y1="18" x2="12.01" y2="18"></line>
+                                </svg>
+                            </div>
+                        </div>
+
+                        <!-- Orbit 2: code + monitor -->
+                        <div class="orbit-path orbit-2">
+                            <div class="orbit-item item-code" aria-hidden="true">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                     fill="none" stroke="currentColor" stroke-width="2"
+                                     stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="16 18 22 12 16 6"></polyline>
+                                    <polyline points="8 6 2 12 8 18"></polyline>
+                                </svg>
+                            </div>
+                            <div class="orbit-item item-monitor" aria-hidden="true">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                     fill="none" stroke="currentColor" stroke-width="2"
+                                     stroke-linecap="round" stroke-linejoin="round">
+                                    <rect x="2" y="3" width="20" height="12" rx="2" ry="2"></rect>
+                                    <line x1="8" y1="21" x2="16" y2="21"></line>
+                                    <line x1="12" y1="17" x2="12" y2="21"></line>
+                                </svg>
+                            </div>
+                        </div>
+
+                        <!-- Orbit 3: shield + globe -->
+                        <div class="orbit-path orbit-3">
+                            <div class="orbit-item item-ai" aria-hidden="true">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                     fill="none" stroke="currentColor" stroke-width="2"
+                                     stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                                </svg>
+                            </div>
+                            <div class="orbit-item item-globe" aria-hidden="true">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                     fill="none" stroke="currentColor" stroke-width="2"
+                                     stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <line x1="2" y1="12" x2="22" y2="12"></line>
+                                    <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Glow halo behind the orbit sphere -->
+                <div class="absolute -inset-4 bg-primary/5 rounded-full -z-10 blur-xl"></div>
+            </div>
+        </section>
+
+        <!-- =====================================================
+             ABOUT & TECH STACK SECTION
+             ===================================================== -->
+        <section id="about"
+                 class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop
+                        py-stack-lg border-t border-outline-variant/30">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+
+                <!-- Sticky heading -->
+                <div class="md:col-span-4">
+                    <h2 class="font-headline-md text-headline-md text-on-surface sticky top-32">
+                        About &amp; Tech Stack
+                    </h2>
+                </div>
+
+                <!-- Content column -->
+                <div class="md:col-span-8 flex flex-col gap-stack-md">
+
+                    <!-- Bio card -->
+                    <div class="bg-surface p-8 rounded-xl border border-outline-variant
+                                hover:border-primary/50 transition-colors duration-300
+                                relative overflow-hidden group">
+                        <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+                            <span class="material-symbols-outlined text-[64px] text-primary" data-weight="fill">terminal</span>
+                        </div>
+                        <p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+                            Dedicated Developer with over 3 years of experience crafting high-performance
+                            mobile and web applications. Proficient in clean architecture, I specialize in
+                            React JS, Next JS, and React Native, with a strong foundation in Redux,
+                            Tailwind CSS, and robust REST-APIs.
+                        </p>
+                        <p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed mt-4">
+                            My approach focuses on writing maintainable, scalable code while delivering
+                            exceptional user experiences. I thrive in environments that challenge me to
+                            solve complex architectural problems and continuously elevate the standard
+                            of mobile development.
+                        </p>
+                    </div>
+
+                    <!-- Tech stack badges — populated by js/main.js -->
+                    <div id="tech-stack-grid" class="grid grid-cols-2 md:grid-cols-3 gap-4 mt-4">
+                        <!-- Items injected by main.js -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =====================================================
+             PROJECTS SECTION
+             ===================================================== -->
+        <section id="projects"
+                 class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop
+                        py-stack-lg border-t border-outline-variant/30">
+
+            <h2 class="text-display-lg font-display-lg text-on-background mb-stack-md hidden md:block">
+                Selected Works
+            </h2>
+            <h2 class="text-display-lg-mobile font-display-lg-mobile text-on-background mb-stack-md md:hidden">
+                Selected Works
+            </h2>
+
+            <!-- Project cards — populated by js/main.js -->
+            <div id="projects-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+                <!-- Cards injected by main.js -->
+            </div>
+        </section>
+
+        <!-- =====================================================
+             CONTACT SECTION
+             ===================================================== -->
+        <section id="contact"
+                 class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop
+                        py-stack-lg border-t border-outline-variant/30">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-stack-lg">
+
+                <!-- Contact info -->
+                <div>
+                    <h2 class="text-display-lg-mobile md:text-display-lg
+                               font-display-lg-mobile md:font-display-lg
+                               text-on-background mb-4">
+                        Let's Connect
+                    </h2>
+                    <p class="text-body-lg font-body-lg text-on-surface-variant mb-8 max-w-md">
+                        Currently open for new opportunities. Whether you have a question or just
+                        want to say hi, I'll try my best to get back to you!
+                    </p>
+
+                    <div class="flex gap-4">
+                        <a aria-label="LinkedIn"
+                           href="https://www.linkedin.com/in/afif-osamaladen/"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           class="p-3 bg-surface-container border border-outline-variant rounded-full
+                                  text-on-surface hover:text-primary hover:border-primary
+                                  transition-all duration-300 flex items-center justify-center">
+                            <span class="material-symbols-outlined" style='font-variation-settings: "FILL" 1;'>link</span>
+                        </a>
+                        <a aria-label="Email"
+                           href="mailto:afifosama66@email.com"
+                           class="p-3 bg-surface-container border border-outline-variant rounded-full
+                                  text-on-surface hover:text-primary hover:border-primary
+                                  transition-all duration-300 flex items-center justify-center">
+                            <span class="material-symbols-outlined" style='font-variation-settings: "FILL" 1;'>mail</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Contact form -->
+                <div class="bg-surface p-8 rounded-lg border border-outline-variant">
+                    <form id="contact-form" class="space-y-4" novalidate>
+                        <div>
+                            <label for="name" class="block text-label-mono font-label-mono text-on-surface-variant mb-1">
+                                Name
+                            </label>
+                            <input id="name" name="name" type="text" placeholder="John Doe" required
+                                   class="w-full bg-surface-container-low border border-outline-variant rounded p-3
+                                          text-on-surface focus:outline-none focus:border-primary focus:ring-1
+                                          focus:ring-primary transition-all duration-200">
+                        </div>
+
+                        <div>
+                            <label for="email" class="block text-label-mono font-label-mono text-on-surface-variant mb-1">
+                                Email
+                            </label>
+                            <input id="email" name="email" type="email" placeholder="john@example.com" required
+                                   class="w-full bg-surface-container-low border border-outline-variant rounded p-3
+                                          text-on-surface focus:outline-none focus:border-primary focus:ring-1
+                                          focus:ring-primary transition-all duration-200">
+                        </div>
+
+                        <div>
+                            <label for="message" class="block text-label-mono font-label-mono text-on-surface-variant mb-1">
+                                Message
+                            </label>
+                            <textarea id="message" name="message" rows="4" placeholder="Your message here..." required
+                                      class="w-full bg-surface-container-low border border-outline-variant rounded p-3
+                                             text-on-surface focus:outline-none focus:border-primary focus:ring-1
+                                             focus:ring-primary transition-all duration-200"></textarea>
+                        </div>
+
+                        <button type="submit"
+                                class="w-full bg-primary text-on-primary font-bold px-6 py-3 rounded
+                                       transition-all hover:bg-primary-fixed mt-4">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+    </main><!-- /main -->
+
+    <!-- =====================================================
+         FOOTER
+         ===================================================== -->
+    <footer class="bg-surface-dim mt-stack-lg border-t border-outline-variant">
+        <div class="flex flex-col md:flex-row justify-between items-center
+                    max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-stack-md">
+
+            <div class="text-body-lg font-body-lg font-black text-on-surface mb-4 md:mb-0">
+                Afif Osamaladen
+            </div>
+
+            <nav class="text-caption font-caption text-primary flex gap-4" aria-label="Footer navigation">
+                <a class="text-on-surface-variant hover:text-secondary transition-colors"
+                   href="https://www.linkedin.com/in/afif-osamaladen/"
+                   target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                <a class="text-on-surface-variant hover:text-secondary transition-colors"
+                   href="mailto:afifosama66@email.com">Email</a>
+            </nav>
+
+            <div class="text-caption font-caption text-on-surface-variant mt-4 md:mt-0">
+                &copy; 2026 Afif Osamaladen. Built with precision.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Application logic (runs after DOMContentLoaded) -->
+    <script src="js/main.js"></script>
+
+</body>
+</html>

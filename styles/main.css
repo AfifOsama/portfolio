@@ -1,0 +1,154 @@
+/* ============================================================
+   GLOBAL / UTILITY
+   ============================================================ */
+.glow-hover:hover {
+    box-shadow: 0 0 20px rgba(173, 198, 255, 0.15);
+    border-color: #adc6ff;
+}
+
+/* ============================================================
+   ORBIT ANIMATION – container
+   ============================================================ */
+.orbit-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    overflow: visible;
+}
+
+/* ============================================================
+   ORBIT ANIMATION – stars background
+   ============================================================ */
+.stars {
+    position: absolute;
+    top: -30%; left: -30%; right: -30%; bottom: -30%;
+    background-image:
+        radial-gradient(1.5px 1.5px at 20px 30px, #fff, rgba(0,0,0,0)),
+        radial-gradient(1.5px 1.5px at 40px 70px, rgba(255,255,255,0.8), rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 50px 160px, rgba(255,255,255,0.9), rgba(0,0,0,0)),
+        radial-gradient(1.5px 1.5px at 90px 40px, #fff, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 130px 80px, rgba(255,255,255,0.7), rgba(0,0,0,0)),
+        radial-gradient(1.5px 1.5px at 160px 120px, #fff, rgba(0,0,0,0));
+    background-repeat: repeat;
+    background-size: 200px 200px;
+    opacity: 0.5;
+    border-radius: 50%;
+    z-index: 1;
+    animation: rotate 120s linear infinite;
+    pointer-events: none;
+}
+
+/* ============================================================
+   ORBIT ANIMATION – nebula layers
+   ============================================================ */
+.nebula {
+    position: absolute;
+    width: 150%;
+    height: 150%;
+    border-radius: 50%;
+    z-index: 1;
+    pointer-events: none;
+    filter: blur(40px);
+    opacity: 0.6;
+}
+
+.nebula-1 {
+    background: radial-gradient(circle at 30% 30%, rgba(75, 142, 255, 0.2) 0%, transparent 60%);
+    animation: rotate 40s linear infinite reverse;
+}
+
+.nebula-2 {
+    background: radial-gradient(circle at 70% 60%, rgba(147, 51, 234, 0.15) 0%, transparent 60%);
+    animation: rotate 50s linear infinite;
+}
+
+/* ============================================================
+   ORBIT ANIMATION – avatar center
+   ============================================================ */
+.avatar-center {
+    position: relative;
+    z-index: 10;
+    width: 65%;
+    height: 65%;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid rgba(173, 198, 255, 0.3);
+    box-shadow:
+        0 0 40px rgba(173, 198, 255, 0.15),
+        inset 0 0 20px rgba(173, 198, 255, 0.2);
+}
+
+.avatar-center img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ============================================================
+   ORBIT ANIMATION – orbit paths
+   ============================================================ */
+.orbit-path {
+    position: absolute;
+    border-radius: 50%;
+    border: 1px dashed rgba(255, 255, 255, 0.1);
+    animation: rotate 20s linear infinite;
+    z-index: 5;
+    box-shadow:
+        0 0 30px rgba(173, 198, 255, 0.05),
+        inset 0 0 30px rgba(173, 198, 255, 0.05);
+}
+
+.orbit-1 { width: 85%;  height: 85%;  animation-duration: 25s; }
+.orbit-2 { width: 105%; height: 105%; animation-duration: 35s; animation-direction: reverse; }
+.orbit-3 { width: 125%; height: 125%; animation-duration: 45s; }
+
+/* ============================================================
+   ORBIT ANIMATION – orbit items (icons)
+   ============================================================ */
+.orbit-item {
+    position: absolute;
+    width: 44px;
+    height: 44px;
+    background: rgba(28, 32, 40, 0.4);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(173, 198, 255, 0.2);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #adc6ff;
+    box-shadow:
+        0 0 15px rgba(173, 198, 255, 0.2),
+        inset 0 0 10px rgba(173, 198, 255, 0.1);
+    animation: counter-rotate linear infinite;
+}
+
+/* Item positions on each orbit ring */
+.item-laptop  { top: 0;    left: 50%; transform: translate(-50%, -50%); }
+.item-mobile  { bottom: 0; left: 50%; transform: translate(-50%, 50%); }
+.item-code    { top: 50%;  right: 0;  transform: translate(50%, -50%); }
+.item-monitor { top: 50%;  left: 0;   transform: translate(-50%, -50%); }
+.item-ai      { top: 15%;  right: 15%; transform: translate(50%, -50%); }
+.item-globe   { bottom: 15%; left: 15%; transform: translate(-50%, 50%); }
+
+/* Sync item counter-rotation speed with parent orbit */
+.orbit-1 .orbit-item { animation-duration: 25s; }
+.orbit-2 .orbit-item { animation-duration: 35s; animation-direction: reverse; }
+.orbit-3 .orbit-item { animation-duration: 45s; }
+
+/* ============================================================
+   KEYFRAMES
+   ============================================================ */
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to   { transform: rotate(360deg); }
+}
+
+@keyframes counter-rotate {
+    from { transform: rotate(360deg); }
+    to   { transform: rotate(0deg); }
+}
