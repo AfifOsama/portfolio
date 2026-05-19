@@ -37,18 +37,6 @@ const TECH_STACK = [
 /** @type {Project[]} */
 const PROJECTS = [
     {
-        title: "Halalins",
-        description:
-            "Multi-platform insurance and agency management system. Streamlining processes for agents, customers, and admins across web and mobile.",
-        image:
-            "https://lh3.googleusercontent.com/aida-public/AB6AXuCbBoh_pr3w1AU9lrK3zIaR-MSOTZ88rbH3Oqz84wRpu9EAdg5uarufSFbUr3BnUSUeFDlAHWUbC8w8Ikh25-cAnFJvp5Cf6-wmUyQjm2bQMHEtmNnkgAmqo7_fhTHNj7GXbF1UqeisrBLokakoaS1OobnPRubKEl-XXuCz3HI6fswdtRFbfsWRcKGUeMN-B_0ex_ru9a3qfdmJ3hLgo19MInOhWGELyqoGPtA7eH0nvB7A5x-dhG1icV5qrmBJpuL5XJcIKup0QvO_",
-        imageAlt: "Halalins Dashboard",
-        tags: ["React", "Node.js", "PostgreSQL", "Flutter", "AWS"],
-        glowColor: "rgba(34, 197, 94, 0.15)",
-        borderColor: "rgba(34, 197, 94, 0.3)",
-        link: "#",
-    },
-    {
         title: "90 Sports Agency",
         description:
             "Comprehensive management platform for athletes and scouts. Features player marketing, content creation, and performance analysis.",
@@ -58,7 +46,7 @@ const PROJECTS = [
         tags: ["Vue.js", "Laravel", "MySQL", "Tailwind CSS"],
         glowColor: "rgba(251, 191, 36, 0.15)",
         borderColor: "rgba(251, 191, 36, 0.3)",
-        link: "#",
+        link: "https://90sportsagency.com/",
     },
     {
         title: "Kolaboravis",
@@ -70,8 +58,21 @@ const PROJECTS = [
         tags: ["React", "Express", "MongoDB", "GraphQL", "Socket.io"],
         glowColor: "rgba(59, 130, 246, 0.15)",
         borderColor: "rgba(59, 130, 246, 0.3)",
+        link: "https://www.kolaboravis.id/",
+    },
+    {
+        title: "Halalins",
+        description:
+            "Multi-platform insurance and agency management system. Streamlining processes for agents, customers, and admins across web and mobile.",
+        image:
+            "https://lh3.googleusercontent.com/aida-public/AB6AXuCbBoh_pr3w1AU9lrK3zIaR-MSOTZ88rbH3Oqz84wRpu9EAdg5uarufSFbUr3BnUSUeFDlAHWUbC8w8Ikh25-cAnFJvp5Cf6-wmUyQjm2bQMHEtmNnkgAmqo7_fhTHNj7GXbF1UqeisrBLokakoaS1OobnPRubKEl-XXuCz3HI6fswdtRFbfsWRcKGUeMN-B_0ex_ru9a3qfdmJ3hLgo19MInOhWGELyqoGPtA7eH0nvB7A5x-dhG1icV5qrmBJpuL5XJcIKup0QvO_",
+        imageAlt: "Halalins Dashboard",
+        tags: ["React", "Node.js", "PostgreSQL", "Flutter", "AWS"],
+        glowColor: "rgba(34, 197, 94, 0.15)",
+        borderColor: "rgba(34, 197, 94, 0.3)",
         link: "#",
     },
+    
 ];
 
 /* ============================================================
@@ -137,11 +138,13 @@ function createProjectCard(project) {
                 alt="${project.imageAlt}"
                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
             />
-            <div class="absolute inset-0 bg-primary/0 group-hover:bg-primary/20 transition-all duration-300 flex items-center justify-center opacity-0 group-hover:opacity-100">
-                <span class="text-primary font-body-md font-bold px-4 py-2 border border-primary rounded bg-surface/80 backdrop-blur-sm">
-                    View Project
-                </span>
-            </div>
+            <a href="${project.link}" target="_blank" rel="noopener noreferrer">
+                <div class="absolute inset-0 bg-primary/0 group-hover:bg-primary/20 transition-all duration-300 flex items-center justify-center opacity-0 group-hover:opacity-100">
+                    <span class="text-primary font-body-md font-bold px-4 py-2 border border-primary rounded bg-surface/80 backdrop-blur-sm cursor-pointer">
+                        View Project
+                    </span>
+                </div>
+            </a>
         </div>
         <div class="p-6 flex-grow flex flex-col">
             <h3 class="text-headline-sm font-headline-sm text-on-surface mb-2 group-hover:text-primary transition-colors">
